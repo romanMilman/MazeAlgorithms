@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1/QPGceD2nvXV56vT5D/EIxaqRdOWeOuqXs4GUBQ3UIS490sxBrh3AWg3TMV/yLfyZUuhciSIbSnJAmKABThEw==",
+  "dgSpecHash": "nYSDkXE3TCRbLx2nHklM7Xllqw+8Sh+WDBOkU0LPlz0fFLf4PN62ofTJ1Bn8pkRrK/VN+zhNOH8CBRi5yGaGqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YPRMILMA\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

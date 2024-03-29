@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj": {}
+    "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj": {
+    "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
+        "projectUniqueName": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
         "projectName": "MazeAlgorithmTester",
-        "projectPath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
+        "projectPath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\MazeAlgorithmTester.csproj",
         "packagesPath": "C:\\Users\\YPRMILMA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithmTester\\MazeAlgorithmTester\\obj\\",
+        "outputPath": "C:\\Users\\YPRMILMA\\source\\repos\\MazeAlgorithms\\MazeAlgorithmTester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,6 +47,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
