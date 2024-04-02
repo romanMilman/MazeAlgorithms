@@ -14,6 +14,40 @@ namespace MazeAlgorithmTester
         public List<int> Color4f = new List<int>();
 
         public bool IsRemoved;
+
+        public List<string> KeySet()
+        {
+            List<string> keys = new List<string>();
+
+            foreach (var macAndValue in Instance.MacsAndValues)
+            {
+                keys.Add(macAndValue.Mac);
+            }
+
+            return keys;
+        }
+
+        public int Get(string mac)
+        {
+            foreach (var macAndValue in Instance.MacsAndValues)
+            {
+                if (mac == macAndValue.Mac)
+                    return macAndValue.Signal;
+            }
+
+            return Int32.MaxValue;
+        }
+
+        internal bool ContainsKey(string mac)
+        {
+            foreach (var macAndValue in Instance.MacsAndValues)
+            {
+                if (macAndValue.Mac == mac)
+                    return true;
+            }
+
+            return false;
+        }
     }
 
     public class WifiFingerprint
