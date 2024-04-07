@@ -8,7 +8,17 @@ namespace MazeAlgorithmTester
         {
             List<Fingerprint> fingerprints = new List<Fingerprint>();
 
+            Locator locator = new Locator();
+
             JsonParseFingerprints(fingerprints, "radio_map.json");
+
+            var firstFinger = fingerprints[0];
+            fingerprints.RemoveAt(0);
+
+            var point = locator.GetLocation(fingerprints, firstFinger);
+
+            Console.WriteLine(firstFinger.Center.X + " " + firstFinger.Center.Y);
+            Console.WriteLine(point.X + " " + point.Y);
         }
 
         private static void JsonParseFingerprints(List<Fingerprint> fingerprints, string jsonFilePath)
@@ -25,16 +35,16 @@ namespace MazeAlgorithmTester
                 foreach (JObject jsonObject in jsonArray)
                 {
                     // Extract CLASSNAME and INSTANCE properties
-                    string className = (string) jsonObject["CLASSNAME"];
-                    JObject instance = (JObject) jsonObject["INSTANCE"];
+                    string className = (string)jsonObject["CLASSNAME"];
+                    JObject instance = (JObject)jsonObject["INSTANCE"];
 
                     // Extract INSTANCE properties
-                    JObject wifiFingerprint = (JObject) instance["mWiFiFingerprint"];
-                    JObject center = (JObject) instance["mCenter"];
-                    double radius = (double) instance["mRadius"];
-                    int color = (int) instance["mColor"];
-                    JArray color4f = (JArray) instance["mColor4f"];
-                    bool isRemoved = (bool) instance["mIsRemoved"];
+                    JObject wifiFingerprint = (JObject)instance["mWiFiFingerprint"];
+                    JObject center = (JObject)instance["mCenter"];
+                    double radius = (double)instance["mRadius"];
+                    int color = (int)instance["mColor"];
+                    JArray color4f = (JArray)instance["mColor4f"];
+                    bool isRemoved = (bool)instance["mIsRemoved"];
 
 
                     Fingerprint fingerprint = new Fingerprint() { };
@@ -50,7 +60,7 @@ namespace MazeAlgorithmTester
                     //Console.WriteLine("WiFi Fingerprint:");
                     foreach (var item in wifiFingerprint)
                     {
-                        MacAndValue macAndValue = new MacAndValue(item.Key, (int) item.Value);
+                        MacAndValue macAndValue = new MacAndValue(item.Key, (int)item.Value);
                         fingerprint.Instance.MacsAndValues.Add(macAndValue);
                     }
 

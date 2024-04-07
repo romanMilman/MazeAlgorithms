@@ -84,7 +84,7 @@ namespace MazeAlgorithmTester
                 if (score > NEIGHBOUR_MIN_SCORE)
                 {
                     List<Fingerprint> list = GetListByScore(fingerprintsByScore, score);
-                    if (list == null)
+                    if (list.Count == 0)
                     {
                         list = new List<Fingerprint>();
                         fingerprintsByScore.Add(new KeyValuePair<int, List<Fingerprint>>(score, list));
@@ -196,12 +196,13 @@ namespace MazeAlgorithmTester
 
         public class PointF
         {
-            double x, y;
+            public double X { get; set; }
+            public double Y { get; set; }
 
             public void Set(double x, double y)
             {
-                this.x = x;
-                this.y = y;
+                X = x;
+                Y = y;
             }
         }
     }
